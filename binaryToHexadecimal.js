@@ -48,16 +48,23 @@ const binaryToHexadecimal = (binary) => {
 
 let value = "01001110";
 
-for (const binary of splitString(value)) {
-  const binaryValues = [1, 2, 4, 8];
-  let sum = 0;
+// calculation for binary to hexadecimal
+const calculation = (value) => {
+  for (const binary of splitString(value)) {
+    const binaryValues = [1, 2, 4, 8];
+    let sum = 0;
 
-  reverseString(binary)
-    .split("")
-    .forEach((digit, index) => {
-      sum += digit === "1" && binaryValues[index];
-    });
+    reverseString(binary)
+      .split("")
+      .forEach((digit, index) => {
+        sum += digit === "1" && binaryValues[index];
+      });
 
-  let hexadecimal = sum <= 9 ? sum : binaryLetter(sum);
-  console.log(`${binary}: ${hexadecimal}`);
-}
+    let hexadecimal = sum <= 9 ? sum : binaryLetter(sum);
+    console.log(`${binary}: ${hexadecimal}`);
+  }
+
+  return "";
+};
+
+console.log(calculation(value));

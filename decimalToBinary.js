@@ -1,4 +1,4 @@
-let testValue = 174;
+let testValue = 12;
 
 const reverseString = (string) => {
   return string.split("").reverse().join("");
