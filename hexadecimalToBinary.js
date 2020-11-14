@@ -42,7 +42,7 @@ const hexadecimalToBinary = (hexadecimal) => {
   return binary;
 };
 
-// console.log(hexadecimalToBinary(value));
+console.log(hexadecimalToBinary(value));
 
 // calculation for hexadecimal to binary
 const calculation = (hexadecimal) => {
