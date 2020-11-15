@@ -18,13 +18,4 @@ let results = whatIsInAName(
   { apple: 1, bat: 2 }
 );
 
-// results = whatIsInAName(
-//   [
-//     { first: "Romeo", last: "Montague" },
-//     { first: "Mercutio", last: null },
-//     { first: "Tybalt", last: "Capulet" },
-//   ],
-//   { last: "Capulet" }
-// );
-
 console.log(results);
