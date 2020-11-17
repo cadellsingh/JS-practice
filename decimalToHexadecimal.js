@@ -39,7 +39,7 @@ const calculation = (decimal) => {
     let remainder = decimal % 16;
     let remainderHex = remainder > 9 ? binaryLetter(remainder) : remainder;
 
-    console.log(`Division by 16: ${decimal} / 2`);
+    console.log(`Division by 16: ${decimal} / 16`);
     console.log(`Quotient: ${quotient}`);
     console.log(`Remainder (decimal): ${remainder}`);
     console.log(`Remainder (hexadecimal): ${remainderHex}`);
