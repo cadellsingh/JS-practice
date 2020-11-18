@@ -11,20 +11,20 @@ const productExceptOne = (arr) => {
 };
 
 // What if you cant use division ?
-// const productExceptOne = (arr) => {
-//   let newArr = [];
-//
-//   for (const value of arr) {
-//     let multiplier = 1;
-//
-//     for (const el of arr) {
-//       value !== el ? (multiplier *= el) : null;
-//     }
-//
-//     newArr.push(multiplier);
-//   }
-//   return newArr;
-// };
+const productExceptOne = (arr) => {
+  let newArr = [];
+
+  for (const value of arr) {
+    let multiplier = 1;
+
+    for (const el of arr) {
+      value !== el ? (multiplier *= el) : null;
+    }
+
+    newArr.push(multiplier);
+  }
+  return newArr;
+};
 
 let results = productExceptOne([1, 2, 3, 4, 5]);
 //Outputs -> [120, 60, 40, 30, 24]

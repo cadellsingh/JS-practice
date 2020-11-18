@@ -11,6 +11,5 @@ const addUpTo = (arr, num) => {
   return bool;
 };
 
-let results = addUpTo([10, 15, 3, 7], 17);
-
+let results = addUpTo([10, 15, 3, 7], 10);
 console.log(results);
