@@ -1,4 +1,4 @@
-let value = "111001";
+let value = "11";
 
 const reverseString = (string) => {
   return string.split("").reverse().join("");
@@ -6,7 +6,7 @@ const reverseString = (string) => {
 
 const binaryToDecimal = (binary) => {
   binary = reverseString(binary);
-  let sum = 0;
+  let sum = binary === "" ? "" : 0;
 
   for (let i = 0; i < binary.length; i++) {
     sum += binary[i] === "1" && Math.pow(2, i);
@@ -15,7 +15,7 @@ const binaryToDecimal = (binary) => {
   return sum;
 };
 
-// console.log(binaryToDecimal(value));
+console.log(binaryToDecimal(value));
 
 // calculation for binary to decimal
 
@@ -28,4 +28,4 @@ const calculation = (binary) => {
     });
 };
 
-calculation(value);
+// calculation(value);

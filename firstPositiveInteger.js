@@ -3,16 +3,14 @@
 // The array can contain duplicates and negative numbers as well.
 
 const firstPositiveInteger = (arr) => {
-  const sortedArr = arr.sort();
-
-  for (const element of sortedArr) {
-    if (element >= 0 && !sortedArr.includes(element + 1)) {
+  for (const element of arr.sort()) {
+    if (element >= 0 && !arr.includes(element + 1)) {
       return element + 1;
     }
   }
 };
 
-let results = firstPositiveInteger([3, 4, -1, 1]);
-// results = firstPositiveInteger([1, 2, 0]);
+// let results = firstPositiveInteger([3, 4, -1, 1]);
+results = firstPositiveInteger([1, 2, 3]);
 
 console.log(results);

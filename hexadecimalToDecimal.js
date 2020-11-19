@@ -1,4 +1,4 @@
-let value = "e7a9";
+let value = "";
 
 const reverseString = (string) => {
   return string.split("").reverse().join("");
@@ -17,7 +17,7 @@ const binaryValue = (letter) => {
 
 const hexadecimalToDecimal = (hexadecimal) => {
   let counter = hexadecimal.length - 1;
-  let total = 0;
+  let total = hexadecimal === "" ? "" : 0;
 
   for (const value of hexadecimal) {
     let sum = isNaN(value) ? binaryValue(value) : parseInt(value, 10);
@@ -31,7 +31,7 @@ const hexadecimalToDecimal = (hexadecimal) => {
   return total;
 };
 
-// console.log(hexadecimalToDecimal(value));
+console.log(hexadecimalToDecimal(value));
 
 // calculation for hexadecimal to decimal
 
@@ -46,4 +46,4 @@ const calculation = (hexadecimal) => {
   });
 };
 
-calculation(value);
+// calculation(value);
