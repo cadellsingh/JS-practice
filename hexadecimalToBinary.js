@@ -42,7 +42,9 @@ const hexadecimalToBinary = (hexadecimal) => {
   return binary;
 };
 
-console.log(hexadecimalToBinary(value));
+// console.log(hexadecimalToBinary(value));
+
+value = "121";
 
 // calculation for hexadecimal to binary
 const calculation = (hexadecimal) => {
@@ -50,7 +52,7 @@ const calculation = (hexadecimal) => {
     let hex = isNaN(alpha) ? binaryValue(alpha) : alpha;
     let binary = decimalToBinary(hex);
 
-    console.log(`${alpha}: ${binary}`);
+    console.log(`${alpha.toUpperCase()}: ${binary}`);
   });
 };
 

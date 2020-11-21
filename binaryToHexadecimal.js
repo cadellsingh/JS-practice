@@ -1,4 +1,4 @@
-let value = "1110101";
+let value = "1000";
 
 const reverseString = (string) => {
   return string.split("").reverse().join("");
@@ -44,25 +44,29 @@ const binaryToHexadecimal = (binary) => {
   return reverseString(hexadecimal);
 };
 
-console.log(binaryToHexadecimal(value));
+// console.log(binaryToHexadecimal(value));
 
-// calculation for binary to hexadecimal
-const calculation = (value) => {
-  for (const binary of splitString(value)) {
+value = "10010";
+
+const calculation = (binary) => {
+  if (binary === "") {
+    return "";
+  }
+
+  let binarySplit = splitString(reverseString(binary));
+
+  return binarySplit.map((data) => {
     const binaryValues = [1, 2, 4, 8];
     let sum = 0;
 
-    reverseString(binary)
-      .split("")
-      .forEach((digit, index) => {
-        sum += digit === "1" && binaryValues[index];
-      });
+    data.split("").forEach((digit, index) => {
+      sum += digit === "1" && binaryValues[index];
+    });
 
     let hexadecimal = sum <= 9 ? sum : binaryLetter(sum);
-    console.log(`${binary}: ${hexadecimal}`);
-  }
 
-  return "";
+    return `${reverseString(data)}: ${hexadecimal}`;
+  });
 };
 
-// console.log(calculation(value));
+console.log(calculation(value));
