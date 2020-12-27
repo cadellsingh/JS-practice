@@ -6,9 +6,7 @@ const subsetSum = (array, sum) => {
   let validArray = null;
 
   array.forEach((_, index) => {
-    let filteredArray = array.filter((_, idx) => {
-      return index !== idx;
-    });
+    let filteredArray = array.filter((_, idx) => index !== idx);
 
     let newSum = filteredArray.reduce((acc, num) => (acc += num), 0);
 
