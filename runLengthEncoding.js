@@ -12,11 +12,11 @@ const runLengthEncoding = (string) => {
     let index = string.findIndex((i) => char !== i);
     let newArray = string.slice(0, index);
 
-    let charLength = index === -1 ? string.length : newArray.length;
+    let numOfChars = index === -1 ? string.length : newArray.length;
 
     string = string.slice(newArray.length, string.length);
 
-    newString += `${charLength}${char}`;
+    newString += `${numOfChars}${char}`;
 
     if (index === -1) {
       break;
