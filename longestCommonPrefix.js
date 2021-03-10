@@ -24,7 +24,3 @@ const getDuplicates = (arr) => {
 
   return results;
 };
-
-let strs = ["flower", "flow", "flight"];
-// strs = ["dog", "racecar", "car"];
-console.log(longestCommonPrefix(strs));
